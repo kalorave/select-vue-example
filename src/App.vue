@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="wrap">
+      <Select />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Select from "@/components/Select.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Select
+  },
+  data() {
+    return {
+    }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: $font-stack;
+  color: $color-primary;
+  font-size: $html-font-size;
+  .wrap {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    width: 25rem;
+  }
 }
 </style>
